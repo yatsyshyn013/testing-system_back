@@ -8,6 +8,7 @@ const testSchema = new Schema({
     },
     test: {
         type: Array,
+        required: [true, 'Set data for your test'],
     },
     favorite: {
         type: Boolean,
