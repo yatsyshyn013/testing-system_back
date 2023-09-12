@@ -28,8 +28,8 @@ const addSchema = Joi.object({
     test: Joi.array().required().items(
         Joi.object({
             question: Joi.string().required(),
-            correct_answer: Joi.string().required(),
-            incorrect_answers: Joi.array().required(),
+            correctAnswer: Joi.string().required(),
+            incorrectAnswers: Joi.array().required(),
         })
     ),
     favorite: Joi.boolean(),
