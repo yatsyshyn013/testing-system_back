@@ -121,6 +121,18 @@ const getCurrent = async(req, res)=> {
     })
 }
 
+const updateById = async (req, res, next) => {
+    
+    const { id } = req.params;
+    const result = await User.findByIdAndUpdate(id, req.body, { new: true });
+    if (!result) {
+        throw HttpError(404, "Not found");
+    };
+
+    res.json(result)
+
+};
+
 const logout = async (req, res) => {
     const { _id } = req.user;
     await User.findByIdAndUpdate(_id, { token: "" });
@@ -160,4 +172,5 @@ module.exports = {
     getCurrent: ctrlWrapper(getCurrent),
     logout: ctrlWrapper(logout),
     updateAvatar: ctrlWrapper(updateAvatar),
+    updateById: ctrlWrapper(updateById),
 }
