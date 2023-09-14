@@ -22,5 +22,8 @@ router.post("/logout", authenticate, ctrl.logout);
 
 router.patch("/avatars", authenticate, upload.single("avatar"), ctrl.updateAvatar);
 
+router.put('/:id', authenticate, isValidId, ctrl.updateById);
+
+
 
 module.exports = router;
