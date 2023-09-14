@@ -23,10 +23,10 @@ const userSchema = new Schema({
     default: "starter"
   },
   token: String,
-  //  verify: {
-  //   type: Boolean,
-  //   default: false,
-  // },
+   verify: {
+    type: Boolean,
+    default: true,
+  },
   // verificationToken: {
   //   type: String,
   //   required: [true, 'Verify token is required'],
