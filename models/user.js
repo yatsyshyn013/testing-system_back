@@ -27,15 +27,15 @@ const userSchema = new Schema({
     type: Boolean,
     default: true,
   },
-  // verificationToken: {
-  //   type: String,
-  //   required: [true, 'Verify token is required'],
-  // }, 
+  verificationToken: {
+    type: String,
+    required: [true, 'Verify token is required'],
+  }, 
   
-  // avatarURL: {
-  //   type: String,
-  //   required: true,
-  // },
+  avatarURL: {
+    type: String,
+    required: true,
+  },
   result: {
     type: Object,
     
