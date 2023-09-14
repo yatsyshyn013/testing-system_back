@@ -171,8 +171,8 @@ const updateAvatar = async (req, res) => {
 
 module.exports = {
     register: ctrlWrapper(register),
-    verifyEmail: ctrlWrapper(verifyEmail),
-    resendVerifyEmail: ctrlWrapper(resendVerifyEmail),
+    // verifyEmail: ctrlWrapper(verifyEmail),
+    // resendVerifyEmail: ctrlWrapper(resendVerifyEmail),
     login: ctrlWrapper(login),
     getCurrent: ctrlWrapper(getCurrent),
     logout: ctrlWrapper(logout),
